@@ -1,5 +1,5 @@
 {
-  description = "NixOS de Tatane";
+  description = "NixOS";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
@@ -11,13 +11,15 @@
   };
 
   outputs = { nixpkgs, home-manager, ... }:
-  {
-    nixosConfigurations.nixos =
+  let
+    system = "x86_64-linux";
+
+    mkHost = hostModule: users:
       nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+        inherit system;
 
         modules = [
-          ./hosts/desktop/configuration.nix
+          hostModule
 
           home-manager.nixosModules.home-manager
 
@@ -25,10 +27,26 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
 
-            home-manager.users.tatane =
-              import ./home/tatane.nix;
+            home-manager.users = users;
           }
         ];
       };
+  in
+  {
+    nixosConfigurations = {
+
+      desktop = mkHost
+        ./hosts/desktop/configuration.nix
+        {
+          tatane = import ./home/tatane.nix;
+        };
+
+      laptop = mkHost
+        ./hosts/laptop/configuration.nix
+        {
+          elodie = import ./home/elodie.nix;
+        };
+
+    };
   };
 }
