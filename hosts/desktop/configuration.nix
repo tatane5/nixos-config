@@ -20,7 +20,7 @@
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "nixos";
+  networking.hostName = "desktop";
   networking.networkmanager.enable = true;
 
   services.printing.enable = true;

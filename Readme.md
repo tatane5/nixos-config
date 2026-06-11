@@ -1,0 +1,1 @@
+git clone https://github.com/tatane5/nixos-config.git ~/nixos-config
