@@ -10,7 +10,6 @@
     epiphany
     gnome-maps
     gnome-music
-    gnome-terminal
     gnome-weather
     seahorse
     showtime
