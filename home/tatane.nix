@@ -9,10 +9,10 @@
   programs.home-manager.enable = true;
 
   programs.fastfetch.enable = true;
+  programs.git.enable = true;
 
   home.packages = with pkgs; [
     # Development tools
-      git
       vscode
 
     # Multimedia / Graphism
@@ -30,7 +30,6 @@
          
          
     # Shell tools
-      fastfetch
       neovim
 
   ];
@@ -41,7 +40,8 @@
   home-manager.users.tatane = {
   programs.fish.enable = true;
 };
-   programs.kitty.enable = true;
+  
+  programs.kitty.enable = true;
 
   catppuccin = {
     enable = true;
