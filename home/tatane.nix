@@ -38,9 +38,18 @@
   xdg.configFile."fastfetch/config.jsonc".source =
     ../config/fastfetch.jsonc;
   
-home-manager.users.tatane = {
+  home-manager.users.tatane = {
   programs.fish.enable = true;
 };
+   programs.kitty.enable = true;
+
+  catppuccin = {
+    enable = true;
+    flavor = "mocha";
+    accent = "blue";
+
+    kitty.enable = true;
+  };
 }
 
 

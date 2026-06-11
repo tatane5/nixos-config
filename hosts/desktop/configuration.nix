@@ -29,7 +29,6 @@
 
 
   environment.systemPackages = with pkgs; [
-
   ];
 
   system.stateVersion = "26.05";
