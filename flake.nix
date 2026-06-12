@@ -36,8 +36,8 @@
   {
     nixosConfigurations = {
 
-      desktop = mkHost
-        ./hosts/desktop/configuration.nix
+      ghost = mkHost
+        ./hosts/ghost/configuration.nix
         {
           tatane = import ./home/tatane.nix;
         };

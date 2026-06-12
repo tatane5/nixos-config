@@ -6,8 +6,8 @@
 
     ../../modules/desktop/gnome.nix
     ../../modules/audio/pipewire.nix
-    ../../modules/gaming/steam.nix
     ../../modules/users/tatane.nix
+    ../../modules/shell.nix
   ];
 
   nix.settings.experimental-features = [
@@ -64,5 +64,10 @@
     alsa.support32Bit = true;
 
     pulse.enable = true;
+  };
+# Allias Shell
+  environment.shellAliases = {
+    nixupgrade = "sudo nixos-rebuild switch --upgrade --flake ~/nixos-config#ghost";
+  
   };
 }

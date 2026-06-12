@@ -1,6 +1,10 @@
 { pkgs, config, username, ... }:
 
 {
+    imports = [
+    ../../modules/gaming/steam.nix
+  ];
+  
   home.username = "tatane";
   home.homeDirectory = "/home/tatane";
 
