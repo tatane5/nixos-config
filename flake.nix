@@ -1,5 +1,5 @@
 {
-  description = "NixOS";
+  description = "Tatane NixOS configuration";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
