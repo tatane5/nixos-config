@@ -3,6 +3,7 @@
 {
     imports = [
     ../../modules/gaming/steam.nix
+    ../../modules/users/tatane.nix
   ];
   
   home.username = "tatane";

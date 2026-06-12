@@ -6,8 +6,7 @@
 
     ../../modules/desktop/gnome.nix
     ../../modules/audio/pipewire.nix
-    ../../modules/users/tatane.nix
-    ../../modules/shell.nix
+    ../../modules/fish.nix
   ];
 
   nix.settings.experimental-features = [
@@ -20,7 +19,7 @@
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "desktop";
+  networking.hostName = "ghost";
   networking.networkmanager.enable = true;
 
   services.printing.enable = true;
