@@ -14,7 +14,7 @@
     # Theme
      paper-icon-theme
     (marble-shell-theme.override {
-      colors = ["yellow"];
+      colors = ["gray"];
       additionalInstallationTweaks = [ "-O" ];
     })
     catppuccin-gtk
@@ -38,7 +38,7 @@
     };
    # User theme extension settings
       "org/gnome/shell/extensions/user-theme" = {
-        name = "Marble-yellow-light";
+        name = "Marble-gray-dark";
       };
   
 
