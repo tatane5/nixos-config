@@ -14,6 +14,8 @@
   home.packages = with pkgs; [
     # Development tools
       vscode
+    # Fonts
+      jetbrains-mono
 
     # Multimedia / Graphism
       krita
@@ -40,4 +42,10 @@
   programs.fish.enable = true
   
 
+  # Desktop background
+      "org/gnome/desktop/background" = {
+        picture-uri = "file:///home/tatane/.wallpaper2.png";
+        picture-uri-dark = "file:///home/tatane/.wallpaper2.png";
+      };
 
+}
