@@ -36,6 +36,11 @@
     home.file.".wallpaper.jpg" = {
       source = ./../../img/wallpaper2.png;
     };
+   # User theme extension settings
+      "org/gnome/shell/extensions/user-theme" = {
+        name = "Marble-yellow-light";
+      };
+  
 
 
 }
