@@ -28,9 +28,6 @@
   nixpkgs.config.allowUnfree = true;
 
 
-  environment.systemPackages = with pkgs; [
-  ];
-
   system.stateVersion = "26.05";
 
 #time zone / keymap
@@ -56,4 +53,16 @@
   };
 
   console.keyMap = "fr";
+
+# Enable sound with pipewire
+  services.pulseaudio.enable = false;
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+
+    alsa.enable = true;
+    alsa.support32Bit = true;
+
+    pulse.enable = true;
+  };
 }
