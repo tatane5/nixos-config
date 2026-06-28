@@ -82,7 +82,8 @@
 
   # Allias Shell
   environment.shellAliases = {
-    nixup = "sudo nixos-rebuild switch --upgrade --flake ~/nixos-config#$(hostname)";
+    nixup = "nix flake update ~/nixos-config && sudo nixos-rebuild switch --flake ~/nixos-config#$(hostname)";
+   # sudo nixos-rebuild switch --upgrade --flake ~/nixos-config#$(hostname)";
     
   };
 }
