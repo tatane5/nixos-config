@@ -9,7 +9,7 @@
   programs.home-manager.enable = true;
 
   programs.fastfetch.enable = true;
-  #programs.git.enable = true;
+
   programs.git = {
   enable = true;
   userName = "tatane5";

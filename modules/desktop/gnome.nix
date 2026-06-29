@@ -21,6 +21,7 @@
     # GNOME-specific system packages
    environment.systemPackages = with pkgs; [
     # GNOME utilities
+     gnome-boxes
      gnome-tweaks
      gnomeExtensions.user-themes
      gnomeExtensions.dash-to-dock

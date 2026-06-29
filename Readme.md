@@ -11,7 +11,7 @@ Installation minimale via l’ISO officielle
  
 ### Installation git
 ````
-nix shell nixpkgs#git
+nix shell nixpkgs#git --extra-experimental-features nix-command --extra-experimental-features flakes
 ````
  
 ### Clone dotfiles

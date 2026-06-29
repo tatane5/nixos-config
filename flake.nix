@@ -75,7 +75,7 @@
         user = "elodie";
         userModule = ./modules/users/elodie.nix;
         homeModule = ./home/elodie.nix;
-        hostname = "nixos_laptop";
+        hostname = "laptop";
         keyboardLayout = "fr";
         keyboardVariant = "";
       };
