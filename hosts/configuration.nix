@@ -19,6 +19,11 @@
 
 
   networking.networkmanager.enable = true;
+  
+  # for gnome-boxes
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+  virtualisation.spiceUSBRedirection.enable = true;
 
   # Enable CUPS to print documents.
   services.printing = {
@@ -86,4 +91,10 @@
    # sudo nixos-rebuild switch --upgrade --flake ~/nixos-config#$(hostname)";
     
   };
+  
+  services.udev.extraRules = ''
+    # Tous les périphériques USB accessibles en lecture/écriture par le groupe libvirtd
+    SUBSYSTEM=="usb", MODE="0660", GROUP="libvirtd"
+  '';
+
 }

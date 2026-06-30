@@ -9,6 +9,8 @@
   programs.home-manager.enable = true;
 
   programs.fastfetch.enable = true;
+  
+  
 
   programs.git = {
   enable = true;
